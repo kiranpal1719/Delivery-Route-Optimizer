@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Delivery Route Optimizer</title>
+    <link rel="stylesheet" href="Dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav>
+      <h2>
+        <i id="mapIcon" class="fa-solid fa-location-dot"></i>Delivery Route
+        Optimizer
+      </h2>
+
+      <button id="logoutBtn">Logout</button>
+    </nav>
+
+    <div class="main">
+      <div class="left">
+        <h3>Plan a Route</h3>
+
+        <input type="text" id="warehouse" placeholder="Warehouse Location" />
+
+        <div class="delivery-box">
+          <input
+            type="text"
+            id="deliveryLocation"
+            placeholder="Delivery Location"
+          />
+
+          <button id="addBtn">Add</button>
+        </div>
+
+        <ul id="locationList"></ul>
+
+        <button id="generateBtn">Generate Optimized Route</button>
+      </div>
+
+      <div class="right">
+        <div class="card">
+          <h3>Optimized Route</h3>
+          <div id="routeResult">Route will appear here...</div>
+        </div>
+
+        <div class="card">
+          <h3>Route Summary</h3>
+
+          <p>
+            Total Distance:
+            <span id="distance">0 km</span>
+          </p>
+
+          <p>
+            Estimated Time:
+            <span id="time">0 min</span>
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Route History</h3>
+          <div id="history"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="Dashboard.js"></script>
+  </body>
+</html>
